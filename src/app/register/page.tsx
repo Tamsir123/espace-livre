@@ -7,7 +7,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
 
-export default function LoginPage() {
+export default function RegisterPage() {
   const [showPassword, setShowPassword] = useState(false)
 
   return (
@@ -24,26 +24,32 @@ export default function LoginPage() {
         <div className="w-full max-w-md space-y-8">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-[#FFB800]">
-              Bienvenue sur Espace Livre
+              Créer un compte
             </h1>
             <p className="mt-2 text-gray-400">
-              Découvrez une manière simple de lire et partager vos livres tout en bénéficiant
-              d&apos;avantages exclusifs.
+              Rejoignez notre communauté de lecteurs passionnés
             </p>
           </div>
 
           <form className="space-y-6">
             <div>
               <Input
+                type="text"
+                placeholder="Nom complet"
+                className="bg-white/10 border-white/20"
+              />
+            </div>
+            <div>
+              <Input
                 type="email"
-                placeholder="Entrez votre e-mail"
+                placeholder="Adresse e-mail"
                 className="bg-white/10 border-white/20"
               />
             </div>
             <div className="relative">
               <Input
                 type={showPassword ? "text" : "password"}
-                placeholder="Entrez votre mot de passe"
+                placeholder="Mot de passe"
                 className="bg-white/10 border-white/20"
               />
               <button
@@ -58,13 +64,8 @@ export default function LoginPage() {
                 )}
               </button>
             </div>
-            <div className="text-right">
-              <Link href="/forgot-password" className="text-sm text-[#FFB800]">
-                Mot de passe oublié ?
-              </Link>
-            </div>
-            <Button className="w-full bg-[#FFB800] hover:bg-[#FFB800]/90">
-              Se connecter
+            <Button className="w-full bg-[#FFB800] hover:bg-[#FFB800]/90 text-black">
+              S&apos;inscrire
             </Button>
           </form>
 
@@ -74,30 +75,29 @@ export default function LoginPage() {
             </div>
             <div className="relative flex justify-center text-sm">
               <span className="px-2 bg-black text-gray-400">
-                Ou continuez avec
+                Ou inscrivez-vous avec
               </span>
             </div>
           </div>
 
-                        <Button
-                variant="outline"
-                className="flex items-center justify-center w-full border border-gray-700 text-white bg-black hover:bg-gray-800 focus:ring-2 focus:ring-offset-2 focus:ring-gray-600 rounded-md py-2 px-4"
-              >
-                <Image
-                  src="/google.svg"
-                  alt="Google"
-                  width={20}
-                  height={20}
-                  className="mr-3"
-                />
-                <span className="text-sm font-medium">Se connecter avec Google</span>
-              </Button>
-
+                <Button
+                        variant="outline"
+                        className="flex items-center justify-center w-full border border-gray-700 text-white bg-black hover:bg-gray-800 focus:ring-2 focus:ring-offset-2 focus:ring-gray-600 rounded-md py-2 px-4"
+                      >
+                        <Image
+                          src="/google.svg"
+                          alt="Google"
+                          width={20}
+                          height={20}
+                          className="mr-3"
+                        />
+                        <span className="text-sm font-medium">Se connecter avec Google</span>
+                      </Button>
 
           <p className="text-center text-sm text-gray-400">
-            Vous n&apos;avez pas de compte ?{" "}
-            <Link href="/register" className="text-[#FFB800]">
-              Créer un compte
+            Vous avez déjà un compte ?{" "}
+            <Link href="/login" className="text-[#FFB800]">
+              Se connecter
             </Link>
           </p>
         </div>
