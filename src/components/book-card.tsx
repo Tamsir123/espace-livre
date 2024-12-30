@@ -5,7 +5,7 @@ import Link from "next/link"; // Importez Link
 
 export function BookCard() {
   return (
-    <div className="bg-black/50 rounded-lg overflow-hidden border border-white/10">
+    <div className="bg-black/20 rounded-lg overflow-hidden border border-white/10">
       <div className="relative aspect-[3/4]">
         <Image
           src="/book1.png"
@@ -21,11 +21,11 @@ export function BookCard() {
         <h3 className="font-semibold mb-1">Thunmanhandiya</h3>
         <p className="text-sm text-gray-400 mb-4">Mahagamasekara</p>
         <div className="flex gap-2">
-          <Button size="sm" variant="outline" className="flex-1">
+          <Button size="sm"  className="flex-1">
             <Download className="h-4 w-4 mr-2" />
             Télécharger
           </Button>
-          <Button size="sm" variant="outline" className="flex-1">
+          <Button size="sm" className="flex-1">
           <Link href="/books/[id]" as={`/books/1`} className="flex items-center">
             <Info className="h-4 w-4 mr-2" />
             Infos

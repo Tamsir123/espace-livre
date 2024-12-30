@@ -8,14 +8,14 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
-      <section className="relative h-[700px] flex items-center justify-center text-center">
+      <section className="relative h-[650px] flex items-center justify-center text-center">
         <div 
           className="absolute inset-0 bg-[url('/book.png')] bg-cover bg-center"
-          style={{ filter: 'brightness(0.3)' }}
+          style={{ filter: 'brightness(1)' }}
         />
         <div className="relative z-10 container mx-auto px-4">
           <h1 className="text-5xl font-bold text-[#FFB800] mb-4">
-            The Book Lover&apos;s Dreamland Awaits!
+          Le pays des rêves des amateurs de livres vous attend !
           </h1>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
             Le refuge numérique des passionnés de lecture : Partagez, lisez, et laissez-vous inspirer. 

@@ -14,7 +14,7 @@ export default function LoginPage() {
     <div className="min-h-screen bg-black text-white flex">
       <div className="flex-1 relative hidden lg:block">
         <Image
-          src="/reader-illustration.png"
+          src="/imglogin.png"
           alt="Reader illustration"
           fill
           className="object-contain"
@@ -79,16 +79,20 @@ export default function LoginPage() {
             </div>
           </div>
 
-          <Button variant="outline" className="w-full">
-            <Image
-              src="/google.svg"
-              alt="Google"
-              width={20}
-              height={20}
-              className="mr-2"
-            />
-            Se connecter avec Google
-          </Button>
+                        <Button
+                variant="outline"
+                className="flex items-center justify-center w-full border border-gray-700 text-white bg-black hover:bg-gray-800 focus:ring-2 focus:ring-offset-2 focus:ring-gray-600 rounded-md py-2 px-4"
+              >
+                <Image
+                  src="/google.svg"
+                  alt="Google"
+                  width={20}
+                  height={20}
+                  className="mr-3"
+                />
+                <span className="text-sm font-medium">Se connecter avec Google</span>
+              </Button>
+
 
           <p className="text-center text-sm text-gray-400">
             Vous n&apos;avez pas de compte ?{" "}
